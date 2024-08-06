@@ -1,113 +1,574 @@
-import Image from "next/image";
+
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+    <>
+      <section className="myheader">
+        <div className="container  py-3">
+          <div className="row">
+            <div className="col-md-3">
+              <img src="/image/logo.png" className="img-fluid" alt="" />
+            </div>
+            <div className="col-md-4">
+              <div className="input-group mb-3">
+                <input type="text" className="form-control" placeholder="Recipient's username"
+                  aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                <span className="input-group-text" id="basic-addon2"><i
+                  className="fa-solid fa-magnifying-glass"></i></span>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="row">
+                <div className="col">
+                  <div className="row">
+                    <div className="col-3">
+                      <div className="fs-2 text-dark">
+                        <i className="fa-solid fa-phone"></i>
+                      </div>
+                    </div>
+                    <div className="col-9">
+                      Tư vấn hỗ trợ <br />
+                      <strong className="text-dark">23095820935</strong>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="row">
+                    <div className="col-3">
+                      <div className="fs-2 text-dark">
+                        <i className="fa-solid fa-user"></i>
+                      </div>
+                    </div>
+                    <div className="col-9">
+                      Xin Chào <br />
+                      <strong className="text-dark">Đăng Nhập</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-2">
+              <div className="row">
+                <div className="col">
+                  <a href="/#" className=" position-relative">
+                    <span className="fs-2"><i className="fa-regular fa-heart"></i></span>
+                    <span
+                      className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      0
+                      <span className="visually-hidden">unread messages</span>
+                    </span>
+                  </a>
+                </div>
+                <div className="col">
+                  <a href="/#" className=" position-relative">
+                    <span className="fs-2"><i className="fa-solid fa-bag-shopping"></i></span>
+                    <span
+                      className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      0
+                      <span className="visually-hidden">unread messages</span>
+                    </span>
+                  </a>
+                </div>
+                <div className="col">
+                  <a href="/#" className=" position-relative">
+                    <span className="fs-2"><i className="fa-regular fa-comment"></i></span>
+                    <span
+                      className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      0
+                      <span className="visually-hidden">unread messages</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="mymainmenu bg-dark">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-3 text-white py-3">Danh Mục sản Phẩm</div>
+            <div className="col-md-9">
+              <nav className="navbar navbar-expand-lg bg-dark">
+                <div className="container-fluid">
+                  <a className="navbar-brand d-none" href="#">Navbar</a>
+                  <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                  </button>
+                  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li className="nav-item">
+                        <a className="nav-link active text-white" aria-current="page" href="#">Trang Chủ</a>
+                      </li>
+                      <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle text-white" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Liện Hệ
+                        </a>
+                        <ul className="dropdown-menu">
+                          <li><a className="dropdown-item" href="#">Action</a></li>
+                          <li><a className="dropdown-item" href="#">Another action</a></li>
+                          <li>
+                            <hr className="dropdown-divider" />
+                          </li>
+                          <li><a className="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle text-white" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Sản Phẩm
+                        </a>
+                        <ul className="dropdown-menu">
+                          <li><a className="dropdown-item" href="#">Action</a></li>
+                          <li><a className="dropdown-item" href="#">Another action</a></li>
+                          <li>
+                            <hr className="dropdown-divider" />
+                          </li>
+                          <li><a className="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle text-white" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Thông Tin
+                        </a>
+                        <ul className="dropdown-menu">
+                          <li><a className="dropdown-item" href="#">Action</a></li>
+                          <li><a className="dropdown-item" href="#">Another action</a></li>
+                          <li>
+                            <hr className="dropdown-divider" />
+                          </li>
+                          <li><a className="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle text-white" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Khuyễn Mãi
+                        </a>
+                        <ul className="dropdown-menu">
+                          <li><a className="dropdown-item" href="#">Action</a></li>
+                          <li><a className="dropdown-item" href="#">Another action</a></li>
+                          <li>
+                            <hr className="dropdown-divider" />
+                          </li>
+                          <li><a className="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <section className="products">
+        <div className="container py-3">
+          <div className="row py-4">
+            <h2><strong>NEW ARRIVALS</strong></h2>
+            <div className="row py-3">
+              <div className="col-md-6 text-center">
+                <img src="/image/product02.jpg" alt="Product Image" className="img-fluid mb-3 w-75" />
+                <div className="d-flex justify-content-center py-3">
+                  <button style={{ borderRadius: "1px" }} type="button" className="btn btn-outline-dark w-25 p-3">Shop
+                    Now</button>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="row">
+                  <div className="col">
+                    <img className="w-100" src="/image/product05.jpg" alt="" />
+                    <strong>MSI Gaming GF63 12UC i5 12450H</strong>
+                    <br />
+                    <p>BRAND</p>
+                    <div>
+                      <div className="row">
+                        <div className="col-md-4">
+                          <p>AED 32.00</p>
+                        </div>
+                        <div className="col-md-4">
+                          <p>AED 25.60</p>
+                        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+                        <div className="col-md-4">
+                          <button type="button" className=" btn btn-outline-dark w-100 h-75 ">
+                            <p>30% OFF </p>
+                          </button>
+                        </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <img className="w-100" src="/image/product06.jpg" alt="" />
+                    <strong>MSI Gaming GF63 12UC i5 12450H</strong>
+                    <br />
+                    <p>BRAND</p>
+                    <div>
+                      <div className="row">
+                        <div className="col-md-4">
+                          <p>AED 32.00</p>
+                        </div>
+                        <div className="col-md-4">
+                          <p>AED 25.60</p>
+                        </div>
+
+                        <div className="col-md-4">
+                          <button type="button" className=" btn btn-outline-dark w-100 h-75 ">
+                            <p>30% OFF </p>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div className="row py-3" >
+
+              <div className="col-md-6">
+                <div className="row">
+                  <div className="col">
+                    <img className="w-100" src="/image/product07.jpg" alt="" />
+                    <strong>MSI Gaming GF63 12UC i5 12450H</strong>
+                    <br />
+                    <p>BRAND</p>
+                    <div>
+                      <div className="row">
+                        <div className="col-md-4">
+                          <p>AED 32.00</p>
+                        </div>
+                        <div className="col-md-4">
+                          <p>AED 25.60</p>
+                        </div>
+
+                        <div className="col-md-4">
+                          <button type="button" className=" btn btn-outline-dark w-100 h-75 ">
+                            <p>30% OFF </p>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <img className="w-100" src="/image/product08.jpg" alt="" />
+                    <strong>MSI Gaming GF63 12UC i5 12450H</strong>
+                    <br />
+                    <p>BRAND</p>
+                    <div>
+                      <div className="row">
+                        <div className="col-md-4">
+                          <p>AED 32.00</p>
+                        </div>
+                        <div className="col-md-4">
+                          <p>AED 25.60</p>
+                        </div>
+
+                        <div className="col-md-4">
+                          <button type="button" className=" btn btn-outline-dark w-100 h-75 ">
+                            <p>30% OFF </p>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div className="col-md-6 text-center">
+                <img src="/image/product10.jpg" alt="Product Image" className="img-fluid mb-3 w-75" />
+                <div className="d-flex justify-content-center py-3">
+                  <button style={{ borderRadius: "1px" }} type="button" className="btn btn-outline-dark w-25 p-3">Shop
+                    Now</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="topsaleler">
+        <div className="container">
+          <div className="cate-list">
+            <div className="row">
+              <h2><strong>TOP SELLERS</strong></h2>
+              <div className="col-md-3">
+                <div className="item">
+                  <div className="category-img">
+                    <img src="image/product03.jpg" className="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="item">
+                  <div className="category-img">
+                    <img src="image/product04.jpg" className="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="item">
+                  <div className="category-img">
+                    <img src="image/product05.jpg" className="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="item">
+                  <div className="category-img">
+                    <img src="image/product06 .jpg" className="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="container p-6">
+            <div className="row">
+              <div className="col-md-6">
+                <div>
+                  <img className="w-100" src="/image/product11.jpg" alt="" />
+                </div>
+              </div>
+              <div className="col-md-6 d-flex justify-content-center align-items-center">
+                <div className="row " style={{ height: "50v" }}>
+                  <div className="col-auto">
+                    <h1><span>50% OFF</span></h1> <br />
+                    <h4>All <strong>SKINCARE Items</strong></h4>
+                  </div>
+                  <div className="col-auto">
+                    <button style={{ borderRadius: "1px" }} type="button"
+                      className="btn btn-outline-dark w-100 p-3">Shop Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="topsaleler">
+        <div className="container">
+          <div className="cate-list">
+            <div className="row">
+              <h2><strong>TOP SELLERS</strong></h2>
+              <div className="col-md-3">
+                <div className="item">
+                  <div className="category-img">
+                    <img src="image/product03.jpg" className="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="item">
+                  <div className="category-img">
+                    <img src="image/product04.jpg" className="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="item">
+                  <div className="category-img">
+                    <img src="image/product05.jpg" className="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="item">
+                  <div className="category-img">
+                    <img src="image/product06 .jpg" className="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="container p-6">
+            <div className="row">
+              <div className="col-md-6">
+                <div>
+                  <img className="w-100" src="/image/product11.jpg" alt="" />
+                </div>
+              </div>
+              <div className="col-md-6 d-flex justify-content-center align-items-center">
+                <div className="row " style={{ height: "50v" }}>
+                  <div className="col-auto">
+                    <h1><span>50% OFF</span></h1> <br />
+                    <h4>All <strong>SKINCARE Items</strong></h4>
+                  </div>
+                  <div className="col-auto">
+                    <button style={{ borderRadius: "1px" }} type="button"
+                      className="btn btn-outline-dark w-100 p-3">Shop Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="ambassador">
+        <div className="container py-3">
+            <div className="cate-list mb-3">
+                <div className="row">
+                    <h2><strong>AMBASSADOR</strong></h2>
+                 <div className="row">
+                  <div className="col-md-3">
+                  <div className="item">
+                                <div className="category-img">
+                                    <img style={{height:"300px",width:"320px", objectFit:"cover"}} src="image/user02.jpg" alt=""/>
+                                    <div className="d-flex justify-content-center py-3">
+                                        <button style={{borderRadius:"20px"}} type="button" className="btn btn-outline-dark ">Mạnh Tường</button>
+                                    </div>
+           
+                                </div>
+                            </div>
+                  </div>
+                  <div className="col-md-3">
+                  <div className="item">
+                                <div className="category-img">
+                                    <img style={{height:"300px",width:"320px", objectFit:"cover"}} src="image/user05.jpg" alt=""/>
+                                    <div className="d-flex justify-content-center py-3">
+                                        <button style={{borderRadius:"20px"}} type="button" className="btn btn-outline-dark ">Mạnh Tường</button>
+                                    </div>
+           
+                                </div>
+                            </div>
+                  </div>
+                  <div className="col-md-3">
+                  <div className="item">
+                                <div className="category-img">
+                                    <img style={{height:"300px",width:"320px", objectFit:"cover"}} src="image/user04.jpg" alt=""/>
+                                    <div className="d-flex justify-content-center py-3">
+                                        <button style={{borderRadius:"20px"}} type="button" className="btn btn-outline-dark ">Mạnh Tường</button>
+                                    </div>
+           
+                                </div>
+                            </div>
+                  </div>
+                  <div className="col-md-3">
+                  <div className="item">
+                                <div className="category-img">
+                                    <img style={{height:"300px",width:"320px", objectFit:"cover"}} src="image/user01.jpg" alt=""/>
+                                    <div className="d-flex justify-content-center py-3">
+                                        <button style={{borderRadius:"20px"}} type="button" className="btn btn-outline-dark ">Mạnh Tường</button>
+                                    </div>
+           
+                                </div>
+                            </div>
+                  </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section className="myfooter bg-dark text-white py-4">
+        <div className="container">
+            <div className="row">
+                <div className="col-md-3 ">
+                    <h4>Về Chúng Tôi</h4>
+                    <ul style={{listStyle:"none"}}>
+                        <li><a style={{textDecoration:"none", color:"white"}} href="/mua-hang-tra-gop">Chính sách và
+                                hướng dẫn mua hàng trả góp</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/huong-dan-dat-hang">Hướng dẫn mua
+                                hàng và chính sách vận chuyển</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/order/check">Tra cứu đơn hàng</a>
+                        </li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/chinh-sach-bao-hanh">Chính sách đổi
+                                mới và bảo hành</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/dat-hang/bao-hanh-mo-rong">Dịch vụ
+                                bảo hành mở rộng</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/chinh-sach-bao-mat">Chính sách bảo
+                                mật</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}} 
+                                href="/chinh-sach-giai-quyet-khieu-nai">Chính sách giải quyết khiếu nại</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/dieu-khoan-mua-ban-hang-hoa">Quy chế
+                                hoạt động</a></li>
+                    </ul>
+                </div>
+                <div className="col-md-3">
+                    <h4>Về Chúng Tôi</h4>
+                    <ul style={{listStyle:"none"}}>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/mua-hang-tra-gop">Chính sách và
+                                hướng dẫn mua hàng trả góp</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/huong-dan-dat-hang">Hướng dẫn mua
+                                hàng và chính sách vận chuyển</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/order/check">Tra cứu đơn hàng</a>
+                        </li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/chinh-sach-bao-hanh">Chính sách đổi
+                                mới và bảo hành</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/dat-hang/bao-hanh-mo-rong">Dịch vụ
+                                bảo hành mở rộng</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/chinh-sach-bao-mat">Chính sách bảo
+                                mật</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}} 
+                                href="/chinh-sach-giai-quyet-khieu-nai">Chính sách giải quyết khiếu nại</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/dieu-khoan-mua-ban-hang-hoa">Quy chế
+                                hoạt động</a></li>
+                    </ul>
+                </div>
+                <div className="col-md-3">
+                    <h4>Về Chúng Tôi</h4>
+                    <ul style={{listStyle:"none"}}>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/mua-hang-tra-gop">Chính sách và
+                                hướng dẫn mua hàng trả góp</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/huong-dan-dat-hang">Hướng dẫn mua
+                                hàng và chính sách vận chuyển</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/order/check">Tra cứu đơn hàng</a>
+                        </li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/chinh-sach-bao-hanh">Chính sách đổi
+                                mới và bảo hành</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/dat-hang/bao-hanh-mo-rong">Dịch vụ
+                                bảo hành mở rộng</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/chinh-sach-bao-mat">Chính sách bảo
+                                mật</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}} 
+                                href="/chinh-sach-giai-quyet-khieu-nai">Chính sách giải quyết khiếu nại</a></li>
+                        <li><a  style={{textDecoration:"none", color:"white"}}  href="/dieu-khoan-mua-ban-hang-hoa">Quy chế
+                                hoạt động</a></li>
+                    </ul>
+                </div>
+                <div className="col-md-3">
+                    <h5>Nhận Tin Khuyến Mãi</h5>
+                    <p> có cấu trúc xử lý JavaScript khác so với các ứng dụng đơn giản khác. Cụ thể, khi sử dụng thư viện </p>
+                    <div className="input-group mb-3">
+                        <input type="text" className="form-control" placeholder="Recipient's username"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+                        <span className="input-group-text" id="basic-addon2">@example.com</span>
+                    </div>
+
+                    <div>
+                        <span className="box50  border border-danger mr-3">
+                            <i className="fa-brands fa-facebook"></i>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <hr/>
+           
+
+        </div>
+    </section>
+    </>
+
+
+
+  )
 }
