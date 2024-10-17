@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import BootstrapClient from '../components/BootstrapClient';
+
 import Header from '../Pages/Header';
 import Footer from '../Pages/Footer';
 const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +24,7 @@ export default function RootLayout({
       <Header></Header>
        {children}
      <Footer></Footer>
-       <BootstrapClient></BootstrapClient>
+       
         </body>
     </html>
   );

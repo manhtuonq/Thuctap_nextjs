@@ -1,8 +1,10 @@
 'use client'
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import Ambassador from '@/components/component/ambassador';
+import TopSeller from '@/components/component/topSeller';
+import BotSeller from '@/components/component/botseller';
 interface Product {
   id: number; // Thêm thuộc tính id
   product_title: string;
@@ -22,7 +24,6 @@ export default function Home() {
   return (
 
     <>
-
       <section style={{ backgroundColor: "rgba(3, 6, 5, 1)" }} className="mymainmenu ">
         <div className="container">
           <div className="row">
@@ -42,10 +43,10 @@ export default function Home() {
                         <a className="nav-link active text-white" aria-current="page" href="#">Trang Chủ</a>
                       </li>
                       <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle text-white" href="#" role="button"
+                      <Link  className="nav-link dropdown-toggle text-white" href="/profile " role="button"
                           data-bs-toggle="dropdown" aria-expanded="false">
-                          Liện Hệ
-                        </a>
+                         Liên Hệ
+                       </Link>
                         <ul className="dropdown-menu">
                           <li><a className="dropdown-item" href="#">Action</a></li>
                           <li><a className="dropdown-item" href="#">Another action</a></li>
@@ -56,10 +57,10 @@ export default function Home() {
                         </ul>
                       </li>
                       <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle text-white" href="#" role="button"
+                       <Link  className="nav-link dropdown-toggle text-white" href="/products" role="button"
                           data-bs-toggle="dropdown" aria-expanded="false">
                           Sản Phẩm
-                        </a>
+                       </Link>
                         <ul className="dropdown-menu">
                           <li><a className="dropdown-item" href="#">Action</a></li>
                           <li><a className="dropdown-item" href="#">Another action</a></li>
@@ -70,10 +71,10 @@ export default function Home() {
                         </ul>
                       </li>
                       <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle text-white" href="#" role="button"
+                      <Link  className="nav-link dropdown-toggle text-white" href="/cart" role="button"
                           data-bs-toggle="dropdown" aria-expanded="false">
-                          Thông Tin
-                        </a>
+                         Cart
+                       </Link>
                         <ul className="dropdown-menu">
                           <li><a className="dropdown-item" href="#">Action</a></li>
                           <li><a className="dropdown-item" href="#">Another action</a></li>
@@ -84,10 +85,10 @@ export default function Home() {
                         </ul>
                       </li>
                       <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle text-white" href="#" role="button"
+                      <Link  className="nav-link dropdown-toggle text-white" href="/check_out" role="button"
                           data-bs-toggle="dropdown" aria-expanded="false">
-                          Khuyễn Mãi
-                        </a>
+                          Check Out
+                       </Link>
                         <ul className="dropdown-menu">
                           <li><a className="dropdown-item" href="#">Action</a></li>
                           <li><a className="dropdown-item" href="#">Another action</a></li>
@@ -106,6 +107,31 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/*start carousel*/}
+      <div id="carouselExample" className="carousel slide ">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src="/image/banner-01.png" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="/image/banner-02.png" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="/image/banner-03.png" className="d-block w-100" alt="..."/>
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+      {/*end carousel*/}
+
       {/* New Arrivals Section */}
       <section className="products">
         <div className="container py-3">
@@ -140,7 +166,7 @@ export default function Home() {
                       src={product.product_gallery[0] || '/image/default.jpg'}
                       alt={product.product_title}
                     />
-                    <strong ><Link href={`/detail/${product.id}`}>
+                    <strong ><Link style={{textDecoration:'none', color:"black"}} href={`/detail/${product.id}`}>
                       {product.product_title}
                     </Link>
                     </strong>
@@ -169,182 +195,20 @@ export default function Home() {
       </section>
 
 
-      <section className="topsaleler">
-        <div className="container">
-          <div className="cate-list">
-            <div className="row">
-              <h2><strong>TOP SELLERS</strong></h2>
-              <div className="col-md-3">
-                <div className="item">
-                  <div className="category-img">
-                    <img src="image/pro03.webp" className="img-fluid" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="item">
-                  <div className="category-img">
-                    <img src="image/pro02.webp" className="img-fluid" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="item">
-                  <div className="category-img">
-                    <img src="image/pro03.webp" className="img-fluid" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="item">
-                  <div className="category-img">
-                    <img src="image/pro02.webp" className="img-fluid" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="container p-6">
-            <div className="row">
-              <div className="col-md-6">
-                <div>
-                  <img className="w-100 py-3" src="/image/pro06.webp" alt="" />
-                </div>
-              </div>
-              <div className="col-md-6 d-flex justify-content-center align-items-center">
-                <div className="row " style={{ height: "50v" }}>
-                  <div className="col-auto">
-                    <h1><span>50% OFF</span></h1> <br />
-                    <h4>All <strong>SKINCARE Items</strong></h4>
-                  </div>
-                  <div className="col-auto">
-                    <button style={{ borderRadius: "1px" }} type="button"
-                      className="btn btn-outline-dark w-100 p-3">Shop Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section className="topsaleler ">
+       <TopSeller></TopSeller>
       </section>
-      <section className="topsaleler">
-        <div className="container">
-          <div className="cate-list">
-            <div className="row">
-              <h2><strong>TOP SELLERS</strong></h2>
-              <div className="col-md-3">
-                <div className="item">
-                  <div className="category-img">
-                    <img src="image/pro07.webp" className="img-fluid h-50" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="item">
-                  <div className="category-img">
-                    <img src="image/pro08.webp" className="img-fluid h-50" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="item">
-                  <div className="category-img">
-                    <img src="image/pro09.webp" className="img-fluid h-50" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="item">
-                  <div className="category-img">
-                    <img src="image/pro10.webp" className="img-fluid h-50" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="container p-6">
-            <div className="row">
-              <div className="col-md-6">
-                <div>
-                  <img className="w-100 py-3" src="/image/pro06.webp" alt="" />
-                </div>
-              </div>
-              <div className="col-md-6 d-flex justify-content-center align-items-center">
-                <div className="row " style={{ height: "50v" }}>
-                  <div className="col-auto">
-                    <h1><span>50% OFF</span></h1> <br />
-                    <h4>All <strong>SKINCARE Items</strong></h4>
-                  </div>
-                  <div className="col-auto">
-                    <button style={{ borderRadius: "1px" }} type="button"
-                      className="btn btn-outline-dark w-100 p-3">Shop Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <section className="botsaleler">
+        <BotSeller></BotSeller>
       </section>
 
       <section className="ambassador">
-        <div className="container py-3">
-          <div className="cate-list mb-3">
-            <div className="row">
-              <h2><strong>AMBASSADOR</strong></h2>
-              <div className="row">
-                <div className="col-md-3">
-                  <div className="item">
-                    <div className="category-img">
-                      <img style={{ height: "300px", width: "320px", objectFit: "cover" }} src="image/user02.jpg" alt="" />
-                      <div className="d-flex justify-content-center py-3">
-                        <button style={{ borderRadius: "20px" }} type="button" className="btn btn-outline-dark ">User Name</button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="item">
-                    <div className="category-img">
-                      <img style={{ height: "300px", width: "320px", objectFit: "cover" }} src="image/user05.jpg" alt="" />
-                      <div className="d-flex justify-content-center py-3">
-                        <button style={{ borderRadius: "20px" }} type="button" className="btn btn-outline-dark ">User Name</button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="item">
-                    <div className="category-img">
-                      <img style={{ height: "300px", width: "320px", objectFit: "cover" }} src="image/user04.jpg" alt="" />
-                      <div className="d-flex justify-content-center py-3">
-                        <button style={{ borderRadius: "20px" }} type="button" className="btn btn-outline-dark ">User Name</button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-3">
-                  <div className="item">
-                    <div className="category-img">
-                      <img style={{ height: "300px", width: "320px", objectFit: "cover" }} src="image/user01.jpg" alt="" />
-                      <div className="d-flex justify-content-center py-3">
-                        <button style={{ borderRadius: "20px" }} type="button" className="btn btn-outline-dark ">User Name</button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Ambassador></Ambassador>
       </section>
 
-
+   {/*start tailwind*/}
+   
+   {/*end tailwind*/}
 
 
     </>

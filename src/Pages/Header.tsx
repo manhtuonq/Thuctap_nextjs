@@ -170,26 +170,32 @@ export default function Header() {
                 onChange={(e) => setPassword(e.target.value)}
               />
 
-              <div className="form-links ">
-                <a href="#" style={{ color: "black" }}>Quên mật khẩu?</a>
-              </div>
-
-              <button
+             
+             <div className="form-links gap-4 p-2 flex justify-between items-center ">
+                <button
                 type="button"
-                className="btn btn-dark btn-block"
+                className="btn btn-dark btn-block  "
                 onClick={handleLogin}
               >
                 Đăng nhập
               </button>
 
+              <a className="" href="#" style={{ color: "black" }}>Quên mật khẩu?</a>
+              </div>
+
+            
+           
+
               <div className="or-divider">HOẶC</div>
 
-              <button className="btn btn-outline-dark btn-block ">
+             <div className=" flex">
+             <button className="btn btn-outline-dark btn-block w-100">
                 <span className="icon">? Đăng nhập bằng Facebook</span>
               </button>
-              <button className="btn btn-outline-dark btn-block">
+              <button className="btn btn-outline-dark btn-block w-100">
                 <span className="icon">?</span> Đăng nhập bằng Google +
               </button>
+             </div>
 
               <div className="form-footer">
                 Thành viên mới? <a href="#" style={{ color: "black" }}><Link href={"/register"}>Đăng ký ngay</Link></a>
